@@ -7,7 +7,7 @@ print("Operation started on {}".format(startTime))
 
 arcpy.env.addOutputsToMap = False
 
-# When copy and pasting a file path, be sure the 'r' is at the begining, as shown below:
+# Match with script tool parameters
 featureClass = arcpy.GetParameterAsText(0)
 # Be sure to use the Field's Name not the Alias
 fieldToUpdate = [arcpy.GetParameterAsText(1)]
@@ -88,3 +88,4 @@ endTime = datetime.datetime.now().replace(microsecond=0)
 dur = endTime - startTime
 dur = str(dur)
 print('Duration: {}'.format(dur))
+
